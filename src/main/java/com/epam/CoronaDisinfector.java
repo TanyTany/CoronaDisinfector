@@ -2,8 +2,10 @@ package com.epam;
 
 public class CoronaDisinfector {
 
-    private Annauncer announcer = ObjectFactory.getInstance().createObject(Annauncer.class);
-    private Policeman policeman = ObjectFactory.getInstance().createObject(Policeman.class);
+    @InjectByType
+    private Annauncer announcer;
+    @InjectByType
+    private Policeman policeman;
 
     public void start(Room room) {
         announcer.announce("Start Disinfection! Leave the room!");

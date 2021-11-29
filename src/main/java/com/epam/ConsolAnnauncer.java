@@ -1,7 +1,8 @@
 package com.epam;
 
 public class ConsolAnnauncer implements Annauncer {
-    private Recommendator recommendator = ObjectFactory.getInstance().createObject(Recommendator.class);
+    @InjectByType
+    private Recommendator recommendator;
 
     @Override
     public void announce(String message) {
